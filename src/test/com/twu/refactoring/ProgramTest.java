@@ -1,14 +1,15 @@
-package test;
+package com.twu.refactoring;
 
-import main.Program;
 import org.junit.After;
-import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.matchers.JUnitMatchers.containsString;
-import static test.StubbedInputStream.stubInputStream;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+
+import static org.junit.Assert.assertThat;
+import static org.junit.matchers.JUnitMatchers.containsString;
 
 public class ProgramTest {
     private PrintStream console;
@@ -29,7 +30,7 @@ public class ProgramTest {
     @Test
     public void show_the_name_of_the_library() throws IOException {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(EXIT_CODE).atSomePoint());
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(EXIT_CODE).atSomePoint());
 
         launchApp();
 
@@ -39,7 +40,7 @@ public class ProgramTest {
     @Test
     public void show_the_books_available_for_rental() throws IOException {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(BOOK_LISTING).then(EXIT_CODE).atSomePoint());
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(BOOK_LISTING).then(EXIT_CODE).atSomePoint());
 
         launchApp();
 
@@ -52,7 +53,7 @@ public class ProgramTest {
     @Test
     public void check_out_a_book() {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(CHECK_OUT_BOOK).then("1").then(EXIT_CODE).atSomePoint());
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(CHECK_OUT_BOOK).then("1").then(EXIT_CODE).atSomePoint());
 
         launchApp();
 
@@ -62,7 +63,7 @@ public class ProgramTest {
     @Test
     public void check_out_a_book_that_isnt_available() {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(CHECK_OUT_BOOK).then("5").then(EXIT_CODE).atSomePoint());
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(CHECK_OUT_BOOK).then("5").then(EXIT_CODE).atSomePoint());
 
         launchApp();
 
@@ -72,7 +73,7 @@ public class ProgramTest {
     @Test
     public void talk_to_librarian() {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(TALK_TO_LIBRARIAN).then(EXIT_CODE).atSomePoint());
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(TALK_TO_LIBRARIAN).then(EXIT_CODE).atSomePoint());
 
         launchApp();
 
@@ -82,7 +83,7 @@ public class ProgramTest {
     @Test
     public void invalid_entry() {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn("a").then(EXIT_CODE).atSomePoint());
+        System.setIn(StubbedInputStream.stubInputStream().toReturn("a").then(EXIT_CODE).atSomePoint());
 
         launchApp();
 
@@ -92,7 +93,7 @@ public class ProgramTest {
     @Test
     public void show_movie_listing() {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(MOVIE_LISTING).then(EXIT_CODE).atSomePoint());
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(MOVIE_LISTING).then(EXIT_CODE).atSomePoint());
 
         launchApp();
 
@@ -104,7 +105,7 @@ public class ProgramTest {
     @Test
     public void successfull_log_in() {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(LOGIN).then("111-1111").then("bhaisahab")
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(LOGIN).then("111-1111").then("bhaisahab")
                 .then(TALK_TO_LIBRARIAN).then(EXIT_CODE).atSomePoint());
 
         launchApp();
@@ -116,7 +117,7 @@ public class ProgramTest {
     @Test
     public void unsuccessful_login_because_of_username() {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(LOGIN).then("999999-1111").then("bhaisahab")
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(LOGIN).then("999999-1111").then("bhaisahab")
                 .then(TALK_TO_LIBRARIAN).then(EXIT_CODE).atSomePoint());
 
         launchApp();
@@ -128,7 +129,7 @@ public class ProgramTest {
     @Test
     public void unsuccessful_login_because_of_password() {
         System.setOut(new PrintStream(outputStream));
-        System.setIn(stubInputStream().toReturn(LOGIN).then("111-1111").then("disrespectfulPassword")
+        System.setIn(StubbedInputStream.stubInputStream().toReturn(LOGIN).then("111-1111").then("disrespectfulPassword")
                 .then(TALK_TO_LIBRARIAN).then(EXIT_CODE).atSomePoint());
 
         launchApp();

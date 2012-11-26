@@ -1,4 +1,4 @@
-package test;
+package com.twu.refactoring;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,12 +18,12 @@ class StubbedInputStream extends InputStream {
 
     @Override
     public int read(byte[] bytes, int i, int i1) throws IOException {
-        if(input.isEmpty()) {
+        if (input.isEmpty()) {
             return -1;
         }
 
         int byteLocation = 0;
-        for(byte b : input.remove().getBytes()) {
+        for (byte b : input.remove().getBytes()) {
             bytes[byteLocation] = b;
             byteLocation++;
         }
