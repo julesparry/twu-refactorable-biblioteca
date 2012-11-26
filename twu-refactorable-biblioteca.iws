@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59c79941-fa25-4cb6-8b67-521041e8159e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/features/.biblioteca.feature.swp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/features/biblioteca.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/features/support/env.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/features/support/hooks.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="twu-refactorable-biblioteca.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,10 +61,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StubbedInputStreamTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StubbedInputStreamTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/StubbedInputStreamTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="16" selection-start="624" selection-end="624" vertical-scroll-proportion="0.49686846">
+            <state line="22" column="16" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="29" selection-start="86" selection-end="86" vertical-scroll-proportion="0.106471814">
               <folding />
             </state>
           </provider>
@@ -92,6 +99,14 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
     <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
@@ -155,6 +170,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twu-refactorable-biblioteca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twu-refactorable-biblioteca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,7 +626,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/StubbedInputStreamTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="16" selection-start="624" selection-end="624" vertical-scroll-proportion="0.49686846">
+        <state line="22" column="16" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="86" selection-end="86" vertical-scroll-proportion="0.106471814">
           <folding />
         </state>
       </provider>
